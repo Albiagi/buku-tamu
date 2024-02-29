@@ -10,7 +10,7 @@
             <h3>Selamat Datang</h3>
         </div>
         <div>
-            <div id="date_time">Rabu, 28 Februari 2024 - 18:15:15</div>
+            <span id="date_time"></span>
         </div>
         <hr>
         <div class="d-inline">
@@ -26,4 +26,5 @@
         </div>
     </div>
 </div>
+
 @endsection
