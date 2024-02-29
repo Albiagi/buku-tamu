@@ -23,7 +23,11 @@
                     <td>{{ $item->nama_lengkap }}</td>
                     <td>{{ $item->keperluan }}</td>
                     <td class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-danger" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .7rem; --bs-btn-font-size: .75rem;">Keluar</button>
+                        <form action="{{ url('out/'.$item->nama_lengkap) }}" method="post" onsubmit="return confirm('Anda yakin akan menghapus sesi?')">
+                        @csrf
+                        @method('DELETE')
+                            <button type="submit" class="btn btn-danger" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .7rem; --bs-btn-font-size: .75rem;">Keluar</button>
+                        </form>
                     </td>
                 </tr>
                 @endforeach
