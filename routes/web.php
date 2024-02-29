@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GuestController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,5 +19,6 @@ Route::get('/',[GuestController::class, 'index'])->name('home');
 Route::get('/in',[GuestController::class,'show_in'])->name('register');
 Route::post('/register', [GuestController::class, 'store'])->name('store');
 Route::delete('/out/{id}', [GuestController::class, 'destroy'])->name('destroy');
-
 Route::get('/out', [GuestController::class, 'show_out'])->name('out');
+
+Route::get('/dashboard/admin', [AdminController::class, 'index'])->name('dashboard');

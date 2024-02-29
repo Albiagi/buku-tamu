@@ -8,11 +8,11 @@ use Illuminate\Http\Request;
 class GuestController extends Controller
 {
     public function index(){
-        return view('index');
+        return view('index', ['ht' => 'Home']);
     }
 
     public function show_in(){
-        return view('register');
+        return view('register', ['ht' => 'Register']);
     }
 
     public function store(Request $request){
@@ -45,7 +45,7 @@ class GuestController extends Controller
 
     public function show_out(){
         $data = Guest::latest()->get();
-        return view('checkout')->with('data', $data);
+        return view('checkout', ['ht' => 'Check Out'])->with('data', $data);
     }
 
     public function destroy(String $id){
