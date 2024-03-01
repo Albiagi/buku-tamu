@@ -13,8 +13,8 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $data = Guest::latest()->get();
-        return view('dashboard')->with('data', $data);
+        $guest = Guest::latest()->get();
+        return view('dashboard')->with('guest', $guest);
     }
 
     public function login()

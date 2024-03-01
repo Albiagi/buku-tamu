@@ -24,7 +24,7 @@
                     </thead>
                     <tbody>
                         <?php $no=1; ?>
-                        @foreach ($data as $item)
+                        @foreach ($guest as $item)
                         <tr>
                             <td>{{ $no++ }}</td>
                             <td>{{ $item->nama_lengkap }}</td>
