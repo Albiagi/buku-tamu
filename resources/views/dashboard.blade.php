@@ -5,7 +5,7 @@
     <div class="row">
         @include('components.sidebar')
         <div class="col bg-white min-vh-100">
-            <div class="mt-2 border-bottom">
+            <div class="container-fluid border-bottom" id="navbar">
                 @include('components.navbar')
             </div>
             <div class="mt-5 px-4">
