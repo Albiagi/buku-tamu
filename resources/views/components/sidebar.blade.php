@@ -12,7 +12,7 @@
     </div>
     <div class="d-flex align-items-end" style="min-height: 50%">
         <div class="button-menu">
-            <a href="" class="px-3 text-white text-decoration-none"><i class="bi bi-box-arrow-left"></i></i><span> Log Out</span></a>
+            <a href="{{ url('logout') }}" class="px-3 text-white text-decoration-none"><i class="bi bi-box-arrow-left"></i></i><span> Log Out</span></a>
         </div>
     </div>
 </div>
