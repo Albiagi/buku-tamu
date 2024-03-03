@@ -25,11 +25,11 @@ Route::get('/login', [AdminController::class, 'login'])->name('login');
 Route::get('/register', [AdminController::class, 'register'])->name('register');
 Route::post('/proses_login', [AdminController::class, 'proses_login'])->name('proses_login');
 Route::post('/proses_register', [AdminController::class, 'proses_register'])->name('proses_register');
-Route::get('/logout', [AdminController::class, 'logout'])->name('logout');
 //midleware
 //untuk membatasi agar tidak bisa di akses sebelu login
 Route::group(['middleware' => ['auth']], function(){
     Route::group(['middleware' => ['check_login:admin']], function(){
         Route::get('/dashboard/admin', [AdminController::class, 'index'])->name('dashboard');
+        Route::get('/logout', [AdminController::class, 'logout'])->name('logout');
     });
 });
